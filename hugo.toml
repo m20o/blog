@@ -1,0 +1,14 @@
+baseURL = "http://localhost:1313/"
+languageCode = "en-us"
+title = "My Blog"
+
+[params]
+  description = "A minimal Hugo blog"
+  author = "Max"
+
+[markup]
+  [markup.highlight]
+    style = "monokai"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = false
