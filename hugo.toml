@@ -1,4 +1,4 @@
-baseURL = "http://localhost:1313/"
+baseURL = "https://m20o.github.io/blog/"
 title = "My Blog"
 theme = "hugo-coder"
 languageCode = "en-us"
