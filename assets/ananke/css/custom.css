@@ -1,0 +1,269 @@
+/* ============================================
+   Apple-inspired "Sand & Silk" theme
+   Warm, soft, elegant — like a Notes app
+   ============================================ */
+
+/* --- Import SF-style font from Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* --- Root variables --- */
+:root {
+  --sand-50:  #fdfbf7;
+  --sand-100: #f8f4ec;
+  --sand-200: #f0e8d8;
+  --sand-300: #e2d5bf;
+  --sand-400: #c4aa7c;
+  --sand-500: #a68a5b;
+  --sand-600: #8a7049;
+  --sand-700: #5c4a30;
+  --sand-800: #3d3120;
+  --sand-900: #2a2116;
+
+  --accent:   #b8860b;
+  --accent-soft: rgba(184, 134, 11, 0.12);
+
+  --code-bg:  #1e1e2e;
+  --code-fg:  #cdd6f4;
+  --code-border: rgba(184, 134, 11, 0.25);
+}
+
+/* --- Body & background --- */
+body {
+  background-color: var(--sand-50) !important;
+  color: var(--sand-800) !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.011em;
+}
+
+/* --- Header / hero area --- */
+.bg-black, .bg-dark-gray, .bg-near-black {
+  background-color: var(--sand-800) !important;
+}
+
+.cover {
+  background-color: var(--sand-700) !important;
+}
+
+.bg-black-60 {
+  background-color: rgba(42, 33, 22, 0.55) !important;
+}
+
+header, .site-header {
+  border-bottom: 1px solid var(--sand-200);
+}
+
+/* --- Navigation --- */
+nav a, .site-navigation a {
+  font-weight: 500 !important;
+  letter-spacing: 0.02em;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+nav a:hover, .site-navigation a:hover {
+  opacity: 1;
+}
+
+/* --- Main content area --- */
+.bg-near-white {
+  background-color: var(--sand-50) !important;
+}
+
+main {
+  background-color: var(--sand-50) !important;
+}
+
+/* --- Typography: article content --- */
+.nested-copy-line-height, .lh-copy {
+  line-height: 1.75 !important;
+}
+
+article p, .lh-copy p {
+  font-family: 'Source Serif 4', 'Georgia', serif !important;
+  font-size: 1.1rem !important;
+  color: var(--sand-800) !important;
+  line-height: 1.8 !important;
+}
+
+/* --- Headings --- */
+h1, h2, h3, h4, h5, h6,
+article h1, article h2, article h3 {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  color: var(--sand-900) !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.02em;
+}
+
+article h1, .f1 {
+  font-size: 2.25rem !important;
+  font-weight: 600 !important;
+}
+
+article h2, .f2 {
+  font-size: 1.6rem !important;
+  margin-top: 2.5rem !important;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--sand-200);
+}
+
+article h3, .f3 {
+  font-size: 1.25rem !important;
+  color: var(--sand-700) !important;
+}
+
+/* --- Links --- */
+a {
+  color: var(--accent) !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--sand-700) !important;
+}
+
+/* White links in header stay white */
+.white a, header a, .bg-black a, .bg-dark-gray a {
+  color: #fff !important;
+}
+
+.white a:hover, header a:hover {
+  color: var(--sand-200) !important;
+}
+
+/* --- Post list cards --- */
+.post-card, article.bt {
+  border-color: var(--sand-200) !important;
+}
+
+.truncate, .nested-links a {
+  color: var(--accent) !important;
+}
+
+/* --- Blockquotes --- */
+.lh-copy blockquote, blockquote {
+  border-left: 3px solid var(--sand-400) !important;
+  background: var(--sand-100);
+  padding: 1rem 1.25rem !important;
+  margin: 1.5rem 0 !important;
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+  color: var(--sand-700) !important;
+}
+
+/* --- Code blocks: dark, visible, beautiful --- */
+pre {
+  background-color: var(--code-bg) !important;
+  color: var(--code-fg) !important;
+  border: 1px solid var(--code-border) !important;
+  border-radius: 12px !important;
+  padding: 0 !important;
+  margin: 1.5rem 0 !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+pre code {
+  font-family: 'JetBrains Mono', 'SF Mono', 'Fira Code', 'Cascadia Code', monospace !important;
+  font-size: 0.85rem !important;
+  line-height: 1.7 !important;
+  padding: 1.5rem !important;
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* --- Inline code --- */
+:not(pre) > code {
+  font-family: 'JetBrains Mono', 'SF Mono', monospace !important;
+  background-color: var(--sand-100) !important;
+  color: var(--sand-800) !important;
+  padding: 0.15em 0.45em !important;
+  border-radius: 6px !important;
+  font-size: 0.875em !important;
+  border: 1px solid var(--sand-200);
+}
+
+/* --- Syntax highlighting (Catppuccin Mocha inspired) --- */
+pre .comment   { color: #6c7086; font-style: italic; }
+pre .keyword   { color: #cba6f7; }
+pre .string    { color: #a6e3a1; }
+pre .function  { color: #89b4fa; }
+pre .number    { color: #fab387; }
+pre .operator  { color: #89dceb; }
+pre .type      { color: #f9e2af; }
+pre .variable  { color: #f38ba8; }
+
+/* --- Footer --- */
+footer {
+  background-color: var(--sand-100) !important;
+  border-top: 1px solid var(--sand-200);
+  color: var(--sand-600) !important;
+}
+
+footer a {
+  color: var(--sand-600) !important;
+}
+
+/* --- Mid-gray text override --- */
+.mid-gray {
+  color: var(--sand-600) !important;
+}
+
+.dark-gray {
+  color: var(--sand-700) !important;
+}
+
+.gray {
+  color: var(--sand-500) !important;
+}
+
+/* --- Soft transitions on everything --- */
+*, *::before, *::after {
+  transition-property: color, background-color, border-color, opacity;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+
+/* Don't transition layout/transform properties */
+pre *, code * {
+  transition: none;
+}
+
+/* --- Smooth container widths --- */
+.mw6, .mw7, .mw8 {
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+
+/* --- Post meta (date, reading time) --- */
+time, .f6.gray, .f6.mid-gray {
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 0.75rem !important;
+  letter-spacing: 0.08em;
+  color: var(--sand-500) !important;
+}
+
+/* --- Scrollbar styling (Webkit) --- */
+pre::-webkit-scrollbar {
+  height: 6px;
+}
+
+pre::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+pre::-webkit-scrollbar-thumb {
+  background: var(--sand-400);
+  border-radius: 3px;
+}
+
+/* --- Selection color --- */
+::selection {
+  background-color: var(--accent-soft);
+  color: var(--sand-900);
+}
